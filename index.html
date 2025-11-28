@@ -8,7 +8,7 @@
       rel="fonts"
     />
     <link rel="stylesheet" href="utils/styles.css" />
-    <script src="utils/script.js"></script>
+    <script src="utils/script.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -25,13 +25,19 @@
     </div>
     <div class="box">
       <div class="form-control">
-        <input type="text" placeholder="Search For Country" />
+        <input type="text" placeholder="Search For Country" id="search" />
         <i class="fas fa-search fa-bounce"></i>
       </div>
       <div class="dropdownCon">
         <div class="dropwDown">
-          <p>Filter By Region</p>
-          <button><i class="fas fa-chevron-down"></i></button>
+          <select id="Filter">
+            <option value="all">Filter By Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
         </div>
       </div>
     </div>
