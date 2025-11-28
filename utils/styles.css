@@ -44,7 +44,6 @@ button {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: inherit;
   font-size: 1rem;
   font-weight: var(--font-semi-bold);
 }
@@ -76,7 +75,7 @@ button i {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--dark-gray);
+  color: var(--darkest-blue-text);
 }
 
 .dropdownCon {

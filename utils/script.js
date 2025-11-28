@@ -13,7 +13,41 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleIcon.className = "fa-solid fa-sun";
     toggleText.textContent = "Light Mode";
   }
+  loadCountries();
 });
+
+function createCountryCard(country) {
+  return `
+    <div class="country-card" data-code="${country.cca3}">
+      <img src="${country.flags.png}" alt="${
+    country.name.common
+  } flag" class="country-flag" />
+
+      <div class="country-info">
+        <h3 class="country-name">${country.name.common}</h3>
+        <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+        <p><strong>Region:</strong> ${country.region}</p>
+        <p><strong>Capital:</strong> ${
+          country.capital ? country.capital[0] : "N/A"
+        }</p>
+      </div>
+    </div>
+  `;
+}
+
+async function loadCountries() {
+  const res = await fetch(
+    "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,lang"
+  );
+  const data = await res.json();
+  console.log("fetch complete", Array.isArray(data), data);
+
+  countryList.innerHTML = "";
+
+  data.forEach((country) => {
+    countryList.innerHTML += createCountryCard(country);
+  });
+}
 
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
