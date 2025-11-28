@@ -140,3 +140,29 @@ body.dark-theme span,
 body.dark-theme li {
   color: var(--white);
 }
+
+.country-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+}
+
+.country-list {
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+.country-info h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: var(--font-extra-bold);
+}
+
+.country-info p {
+  margin: 0.3rem 0;
+  font-size: var(--fs-home-items);
+}
