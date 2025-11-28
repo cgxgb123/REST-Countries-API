@@ -20,7 +20,6 @@ A responsive, interactive, and accessible web application that allows users to e
 - JavaScript
 - HTML5
 - CSS3
-- jQuery
 
 ## Features
 
