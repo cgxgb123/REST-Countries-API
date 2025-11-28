@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
-      rel="fonts"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="utils/styles.css" />
     <script src="utils/script.js" defer></script>
@@ -21,7 +21,10 @@
   <body>
     <div class="box">
       <h1>Where in the world?</h1>
-      <button class="toggle far fa-moon">Dark Mode</button>
+      <button class="toggle" id="dark-mode">
+        <i class="fa-regular fa-moon"></i>
+        <span>Dark Mode</span>
+      </button>
     </div>
     <div class="box">
       <div class="form-control">
@@ -40,6 +43,8 @@
           </select>
         </div>
       </div>
+      <div id="country-list" class="country-list"></div>
+      <div id="country-details" class="country-details"></div>
     </div>
   </body>
 </html>
