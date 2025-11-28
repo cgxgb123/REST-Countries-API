@@ -1,6 +1,41 @@
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --darker-blue-bg: hsl(207, 26%, 17%);
+  --darkest-blue-text: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --light-gray-bg: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-family: "Nunito Sans", sans-serif;
+  --font-light: 300;
+  --font-semi-bold: 600;
+  --font-extra-bold: 800;
+
+  --fs-home-items: 14px;
+  --fs-detail-page: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+button {
+  outline: none;
+  border: 0;
+  padding: 8px 16px;
+  background: transparent;
+}
 .box {
+  box-sizing: border-box;
   width: 100%;
   padding: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.box:nth-child(1) {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
