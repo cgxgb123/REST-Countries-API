@@ -1,6 +1,4 @@
-# Connect-Four
-
-#### 🌍 REST Countries API with Color Theme Switcher
+# 🌍 REST Countries API with Color Theme Switcher
 
 ## Description
 
@@ -20,19 +18,32 @@ A responsive, interactive, and accessible web application that allows users to e
 - JavaScript
 - HTML5
 - CSS3
+- REST Countries API
 
 ## Features
 
-Users can play a round of classic game Connect Four.
-Users can take turn playing game pieces.
+- Displays each card in a grid showing:
 
-## Whiteboard Images
+  - Flag
+  - Country name
+  - Population
+  - Region
+  - Capital
+  - Languages
 
-\*can be found in project Images folder
+- Search for any country by name
+
+- Filter countries by region:
+
+  - Africa
+  - Americas
+  - Asia
+  - Europe
+  - Oceania
 
 ## Trello Planning
 
-- https://trello.com/b/2jeHdFcV/project-1-connect-4
+- https://trello.com/b/4SyQ8hRP/project-1-html-css-javascript
 
 ## <a name="design"></a>Design
 
