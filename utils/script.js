@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function createCountryCard(country) {
-  const lang = country.languages ? Object.values(lang).join(", ") : "N/A";
+  const lang = country.languages
+    ? Object.values(country.languages).join(", ")
+    : "N/A";
 
   return `
     <div class="country-card" data-code="${country.cca3}">
