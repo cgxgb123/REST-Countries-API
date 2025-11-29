@@ -149,7 +149,7 @@ body.dark-theme li {
   transition: transform 0.2s ease;
 }
 .country-card:hover {
-  transform: scale(2.03);
+  transform: scale(1.13);
 }
 
 .country-list {
