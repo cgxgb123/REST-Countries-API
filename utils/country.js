@@ -32,3 +32,28 @@ toggle.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
+
+async function loadCountry() {
+  if (!code) {
+    console.error("No country code found in URL");
+    return;
+  }
+
+  try {
+    const res = await fetch(
+      `https://restcountries.com/v3.1/alpha/${code}?fields=name,flags,population,region,capital,currencies,languages,borders`
+    );
+
+    const data = await res.json();
+    const country = data[0];
+
+    console.log("Country details:", country);
+
+    renderCountry(country);
+  } catch (err) {
+    console.error("Error fetching country details:", err);
+    Details.innerHTML = `<p>Failed to load country details  :( </p>`;
+  } finally {
+    console.log("Eurekah!");
+  }
+}
