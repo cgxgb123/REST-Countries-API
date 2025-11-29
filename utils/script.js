@@ -39,15 +39,25 @@ function createCountryCard(country) {
   `;
 }
 
+function countryPage() {
+  document.querySelectorAll(".country-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const code = card.getAttribute("data-code");
+      window.location.href = `country.html?code=${code}`;
+    });
+  });
+}
+
 async function loadCountries() {
   const res = await fetch(
-    "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,languages"
+    "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,languages,cca3"
   );
   const data = await res.json();
 
   data.forEach((country) => {
     countryList.innerHTML += createCountryCard(country);
   });
+  countryPage();
 }
 
 toggleBtn.addEventListener("click", () => {
