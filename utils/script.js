@@ -3,7 +3,6 @@ const toggleIcon = toggleBtn.querySelector("i");
 const toggleText = toggleBtn.querySelector("span");
 const filter = document.getElementById("Filter");
 const countryList = document.getElementById("country-list");
-const countryDetails = document.getElementById("country-details");
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
