@@ -156,8 +156,8 @@ body.dark-theme li {
   width: 100%;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1.3fr));
-  gap: 3rem;
+  grid-template-columns: repeat(4, minmax(264px, 1fr));
+  gap: 5rem;
   box-sizing: border-box;
 }
 
