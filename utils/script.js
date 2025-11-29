@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function createCountryCard(country) {
+  const lang = country.languages ? Object.values(lang).join(", ") : "N/A";
+
   return `
     <div class="country-card" data-code="${country.cca3}">
       <img src="${country.flags.png}" alt="${
@@ -30,6 +32,7 @@ function createCountryCard(country) {
         <p><strong>Capital:</strong> ${
           country.capital ? country.capital[0] : "N/A"
         }</p>
+        <p><strong>Languages:</strong> ${lang}</p>
       </div>
     </div>
   `;
@@ -37,12 +40,9 @@ function createCountryCard(country) {
 
 async function loadCountries() {
   const res = await fetch(
-    "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,lang"
+    "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags,languages"
   );
   const data = await res.json();
-  console.log("fetch complete", Array.isArray(data), data);
-
-  countryList.innerHTML = "";
 
   data.forEach((country) => {
     countryList.innerHTML += createCountryCard(country);
