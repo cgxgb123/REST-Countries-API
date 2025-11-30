@@ -58,7 +58,7 @@ async function loadCountry() {
   }
 }
 
-function renderCountry(country) {
+async function renderCountry(country) {
   const container = document.getElementById("country-detail");
 
   const flag = country.flags?.svg || country.flags?.png || "";
@@ -73,7 +73,7 @@ function renderCountry(country) {
 
   const currencies = country.currencies
     ? Object.values(country.currencies)
-        .map((cur) => cur.name)
+        .map((c) => c.name)
         .join(", ")
     : "N/A";
 
@@ -81,37 +81,46 @@ function renderCountry(country) {
     ? Object.values(country.languages).join(", ")
     : "N/A";
 
-  const borders = country.borders
-    ? country.borders
-        .map((b) => `<span class="border-tag">${b}</span>`)
-        .join("")
-    : "No Neighbors";
+  let bordersHTML = "No Neighbors";
+
+  if (country.borders) {
+    const codes = country.borders.join(",");
+    const res = await fetch(
+      `https://restcountries.com/v3.1/alpha?codes=${codes}&fields=name,cca3`
+    );
+    const borderData = await res.json();
+
+    bordersHTML = borderData
+      .map(
+        (c) =>
+          `<a class="border-tag" href="country.html?code=${c.cca3}">${c.name.common}</a>`
+      )
+      .join("");
+  }
 
   container.innerHTML = `
     <div class="detail-wrapper">
       <img src="${flag}" class="detail-flag">
-      
+
       <div class="detail-info">
         <h2>${name}</h2>
 
         <div class="detail-columns">
-
           <div>
             <p><strong>Native Name:</strong> ${nativeName}</p>
             <p><strong>Population:</strong> ${population}</p>
             <p><strong>Region:</strong> ${region}</p>
             <p><strong>Capital:</strong> ${capital}</p>
           </div>
-
           <div>
             <p><strong>Currencies:</strong> ${currencies}</p>
             <p><strong>Languages:</strong> ${languages}</p>
           </div>
-
         </div>
 
         <div class="borders">
-          <strong>Neighboring Countries:</strong> ${borders}
+          <strong>Border Countries:</strong> 
+          ${bordersHTML}
         </div>
       </div>
     </div>
