@@ -54,28 +54,33 @@ button i {
 
 .form-control {
   width: 400px;
-  position: relative;
-  overflow: hidden;
   background: var(--white);
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.2rem;
+  gap: 1rem;
+  border: 2px solid transparent;
+  transition: border 0.2 ease;
+}
+
+.form-control:focus-within {
+  border-color: var(--darker-blue-bg);
+}
+
+.search-icon i {
+  font-size: 1.1rem;
+  color: var(--darkest-blue-text);
 }
 
 .form-control input {
   width: 100%;
-  padding: 1rem 1.2rem;
+  padding: 1rem 0;
   border: none;
   outline: none;
   background: transparent;
   font-size: var(--fs-home-items);
-}
-
-.form-control i {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--darkest-blue-text);
 }
 
 .dropdownCon {
@@ -92,6 +97,9 @@ button i {
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   font-size: var(--fs-home-items);
+}
+body.dark-theme .form-control:focus-within {
+  border-color: var(--light-gray-bg);
 }
 
 body.dark-theme {
