@@ -40,21 +40,22 @@ async function loadCountry() {
   }
 
   try {
-    const res = await fetch(
-      `https://restcountries.com/v3.1/alpha/${code}?fields=name,flags,population,region,capital,currencies,languages,borders`
-    );
+    const res = await fetch(`https://restcountries.com/v3.1/alpha/${code}`);
 
     const data = await res.json();
-    const country = data;
+
+    if (!Array.isArray(data) || !data[0]) {
+      throw new Error("Invalid country data");
+    }
+
+    const country = data[0];
 
     console.log("Country details:", country);
 
-    renderCountry(country);
+    await renderCountry(country);
   } catch (err) {
     console.error("Error fetching country details:", err);
-    details.innerHTML = `<p>Failed to load country details  :( </p>`;
-  } finally {
-    console.log("Eurekah!");
+    details.innerHTML = `<p>Failed to load country details :(</p>`;
   }
 }
 
@@ -83,12 +84,18 @@ async function renderCountry(country) {
 
   let bordersHTML = "No Neighbors";
 
-  if (country.borders) {
+  if (country.borders && country.borders.length > 0) {
     const codes = country.borders.join(",");
+
     const res = await fetch(
       `https://restcountries.com/v3.1/alpha?codes=${codes}&fields=name,cca3`
     );
-    const borderData = await res.json();
+
+    let borderData = await res.json();
+
+    if (!Array.isArray(borderData)) {
+      borderData = [];
+    }
 
     bordersHTML = borderData
       .map(

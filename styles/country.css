@@ -28,6 +28,7 @@
 .back-btn:hover {
   transform: scale(1.05);
 }
+
 .detail-flag {
   width: 520px;
   max-width: 100%;
@@ -54,6 +55,56 @@
 
 .detail-columns p {
   margin: 0.4rem 0;
+}
+.detail-flag {
+  width: 520px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.detail-info {
+  width: 50%;
+}
+
+.detail-info h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.detail-columns {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 3rem;
+}
+
+.detail-columns p {
+  margin: 0.4rem 0;
+}
+
+.borders {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  font-size: 16px;
+  align-items: center;
+}
+
+.border-tag {
+  padding: 0.4rem 1.2rem;
+  background: var(--white);
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease;
+}
+
+.border-tag:hover {
+  transform: scale(1.06);
 }
 
 @media (max-width: 900px) {
