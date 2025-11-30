@@ -1,5 +1,11 @@
 # 🌍 REST Countries API with Color Theme Switcher
 
+![Dark Mode/Home](./assets/example1.png)
+
+![Light Mode/Home](./assets/example3.png)
+
+![Dark Mode/Home/Mobile](./assets/example2.png)
+
 ## Description
 
 A responsive, interactive, and accessible web application that allows users to explore global country data using the REST Countries API. (Built as part of the Frontend Mentor challenge). Users can search for a country, filter by region, and view detailed information, including population, languages, currencies, and neighboring countries.
@@ -60,10 +66,10 @@ A responsive, interactive, and accessible web application that allows users to e
 
 ## <a name="deployment"></a>Deployed Link
 
-[Github Pages](<[https://wonderful-brahmagupta-6a75d3.netlify.com](https://connect4pc.netlify.app/)>)
+[Github Pages](https://cgxgb123.github.io/REST-Countries-API/)
 
-- You can view the repository:
-  [Github.com](https://github.com/cgxgb123/REST-Countries-API)
+- You can view the repository here:
+  [Github](https://github.com/cgxgb123/REST-Countries-API)
 - If unable to view please go live locally through VS Code
 
 ## <a name="author"></a>About The Author
