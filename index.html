@@ -22,7 +22,7 @@
   <body>
     <div class="box">
       <h1>Where in the world?</h1>
-      <button class="toggle" id="dark-mode">
+      <button class="toggle" id="dark-mode" aria-label="Toggle Dark Mode">
         <i class="fa-regular fa-moon"></i>
         <span>Dark Mode</span>
       </button>
@@ -30,11 +30,16 @@
     <div class="box">
       <div class="form-control">
         <div class="search-icon"><i class="fas fa-search fa-bounce"></i></div>
-        <input type="text" placeholder="Search for a Country" id="search" />
+        <input
+          type="text"
+          placeholder="Search for a Country"
+          id="search"
+          aria-label="Search for a Country"
+        />
       </div>
       <div class="dropdownCon">
         <div class="dropwDown">
-          <select id="Filter">
+          <select id="Filter" aria-label="Filter by Region">
             <option value="all">Filter By Region</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>

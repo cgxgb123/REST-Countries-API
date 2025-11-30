@@ -100,14 +100,14 @@ async function renderCountry(country) {
     bordersHTML = borderData
       .map(
         (c) =>
-          `<a class="border-tag" href="country.html?code=${c.cca3}">${c.name.common}</a>`
+          `<a class="border-tag" href="country.html?code=${c.cca3}" aria-label="View Details for ${c.name.common}">${c.name.common}</a>`
       )
       .join("");
   }
 
   container.innerHTML = `
     <div class="detail-wrapper">
-      <img src="${flag}" class="detail-flag">
+      <img src="${flag}" class="detail-flag" alt="Flag of ${name}">
 
       <div class="detail-info">
         <h2>${name}</h2>
