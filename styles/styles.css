@@ -149,13 +149,12 @@ body.dark-theme li {
   width: 100%;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 3rem;
-  box-sizing: border-box;
   max-width: 1280px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
-
 .country-card {
   background: var(--white);
   border-radius: 8px;
@@ -163,7 +162,8 @@ body.dark-theme li {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease;
-  width: 100%;
+  width: 264px;
+  margin: 0 auto;
 }
 
 .country-flag {
