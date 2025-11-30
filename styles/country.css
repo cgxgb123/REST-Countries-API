@@ -1,0 +1,14 @@
+.countryDetailBox {
+  padding: 2rem 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+
