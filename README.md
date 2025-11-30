@@ -26,7 +26,7 @@ A responsive, interactive, and accessible web application that allows users to e
 - HTML5
 - CSS3
 - REST Countries API
-
+  
 ## <a name="features"></a> Features
 
 - Displays each card in a grid showing:
