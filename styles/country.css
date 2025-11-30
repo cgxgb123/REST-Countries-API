@@ -3,7 +3,13 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-
+.detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6rem;
+  margin-top: 2rem;
+}
 .back-btn {
   padding: 0.6rem 1.8rem;
   background: var(--white);
@@ -22,13 +28,32 @@
 .back-btn:hover {
   transform: scale(1.05);
 }
+.detail-flag {
+  width: 520px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
 
-.detail-wrapper {
+.detail-info {
+  width: 50%;
+}
+
+.detail-info h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.detail-columns {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 6rem;
-  margin-top: 2rem;
+  gap: 5rem;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 3rem;
+}
+
+.detail-columns p {
+  margin: 0.4rem 0;
 }
 
 @media (max-width: 900px) {
