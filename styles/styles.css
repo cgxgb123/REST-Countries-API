@@ -210,3 +210,14 @@ body.dark-theme li {
   margin: 0.3rem 0;
   font-size: var(--fs-home-items);
 }
+
+.no-results {
+  grid-column: 1 / -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4rem;
+}
