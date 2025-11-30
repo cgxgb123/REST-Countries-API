@@ -12,3 +12,27 @@
   margin-top: 3rem;
 }
 
+@media (max-width: 900px) {
+  .detail-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .detail-info {
+    width: 100%;
+  }
+  .detail-flag {
+    width: 100%;
+  }
+  .countryDetailBox {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .detail-info h2 {
+    font-size: 2rem;
+  }
+  .countryDetailBox {
+    padding: 1.5rem;
+  }
+}
