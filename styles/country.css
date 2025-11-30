@@ -4,12 +4,31 @@
   margin: 0 auto;
 }
 
+.back-btn {
+  padding: 0.6rem 1.8rem;
+  background: var(--white);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.15s ease;
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
 .detail-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 5rem;
-  margin-top: 3rem;
+  gap: 6rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 900px) {

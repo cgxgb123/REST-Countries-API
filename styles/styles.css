@@ -102,6 +102,15 @@ body.dark-theme .form-control:focus-within {
   border-color: var(--light-gray-bg);
 }
 
+body.dark-theme .back-btn {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+body.dark-theme .border-tag {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
 body.dark-theme {
   background: var(--darker-blue-bg);
   color: var(--white);
