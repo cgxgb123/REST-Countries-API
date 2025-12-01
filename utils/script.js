@@ -4,7 +4,6 @@ const toggleText = toggleBtn.querySelector("span");
 const filter = document.getElementById("Filter");
 const countryList = document.getElementById("country-list");
 const searchInput = document.getElementById("search");
-let allCountries = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
@@ -26,7 +25,7 @@ function createCountryCard(country) {
     <div class="country-card" data-code="${country.cca3}">
       <img src="${country.flags.png}" alt="${
     country.name.common
-  } flag" class="country-flag" />
+  } flag" class="country-flag" aria-label="${country.name.common} flag"/>
 
       <div class="country-info">
         <h3 class="country-name">${country.name.common}</h3>

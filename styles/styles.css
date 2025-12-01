@@ -5,12 +5,10 @@
   --dark-gray: hsl(0, 0%, 52%);
   --light-gray-bg: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
-
   --font-family: "Nunito Sans", sans-serif;
   --font-light: 300;
   --font-semi-bold: 600;
   --font-extra-bold: 800;
-
   --fs-home-items: 14px;
   --fs-detail-page: 16px;
 }
@@ -98,6 +96,7 @@ button i {
   border-radius: 6px;
   font-size: var(--fs-home-items);
 }
+
 body.dark-theme .form-control:focus-within {
   border-color: var(--light-gray-bg);
 }
@@ -172,6 +171,7 @@ body.dark-theme li {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
 .country-card {
   background: var(--white);
   border-radius: 8px;
