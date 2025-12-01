@@ -56,11 +56,13 @@ async function loadCountry() {
   } catch (err) {
     console.error("Error fetching country details:", err);
     details.innerHTML = `<p>Failed to load country details :(</p>`;
+  } finally {
+    console.log("Load Country Complete!");
   }
 }
 
 async function renderCountry(country) {
-  const container = document.getElementById("country-detail");
+  const box = document.getElementById("country-detail");
 
   const flag = country.flags?.svg || country.flags?.png || "";
   const name = country.name?.common || "Unknown";
@@ -105,7 +107,7 @@ async function renderCountry(country) {
       .join("");
   }
 
-  container.innerHTML = `
+  box.innerHTML = `
     <div class="detail-wrapper">
       <img src="${flag}" class="detail-flag" alt="Flag of ${name}">
 
